@@ -9,14 +9,14 @@ import DriverModel from "../modules/Driver.js";
 const mailTransporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "thesevaksargsyan@gmail.com",
-    pass: "whaidffvttnizhpg",
+    user: process.env.USER,
+    pass: process.env.PASSWORD,
   },
 });
 
-const sendVerification = ({ email, verifyCode }) => {
-  let details = {
-    from: "thesevaksargsyan@gmail.com",
+const sendVerification = async({ email, verifyCode }) => {
+   let details = {
+    from: process.env.USER,
     to: email,
     subject: "testing",
     text: `Youre verification code is  ${verifyCode}`,
