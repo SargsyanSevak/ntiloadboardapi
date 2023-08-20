@@ -25,12 +25,7 @@ mongoose
   .catch(() => console.log("DB error"));
 
 const app = express();
-app.use(cors(
-  {
-    // origin: "https://ntl-dusky.vercel.app/",
-    optionsSuccessStatus: 200,
-  }
-));
+app.use(cors());
 
 app.use(express.json());
 
