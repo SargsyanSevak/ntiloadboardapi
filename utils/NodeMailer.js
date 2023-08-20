@@ -14,7 +14,7 @@ const mailTransporter = nodemailer.createTransport({
   },
 });
 
-const sendVerification = async({ email, verifyCode }) => {
+const sendVerification = ({ email, verifyCode }) => {
    let details = {
     from: process.env.USER,
     to: email,
