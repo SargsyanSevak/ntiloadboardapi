@@ -27,7 +27,7 @@ mongoose
 const app = express();
 app.use(cors(
   {
-    origin: "https://ntl-dusky.vercel.app/",
+    // origin: "https://ntl-dusky.vercel.app/",
     optionsSuccessStatus: 200,
   }
 ));
