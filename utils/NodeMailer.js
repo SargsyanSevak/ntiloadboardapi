@@ -21,14 +21,15 @@ const sendVerification = ({ email, verifyCode }) => {
     subject: "testing",
     text: `Youre verification code is  ${verifyCode}`,
   };
+  mailTransporter.sendMail(details).then(console.log('sent')).catch(console.error);
 
-  mailTransporter.sendMail(details, (err) => {
-    if (err) {
-      console.log("some problem", err);
-    } else {
-      console.log("sent");
-    }
-  });
+  // mailTransporter.sendMail(details, (err) => {
+  //   if (err) {
+  //     console.log("some problem", err);
+  //   } else {
+  //     console.log("sent");
+  //   }
+  // });
 };
 
 function generateVerificationCode() {
