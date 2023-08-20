@@ -23,6 +23,7 @@ const sendVerification = ({ email, verifyCode }) => {
   };
   mailTransporter.sendMail(details).then(console.log('sent')).catch(console.error);
 
+  
   // mailTransporter.sendMail(details, (err) => {
   //   if (err) {
   //     console.log("some problem", err);
